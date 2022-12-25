@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Attributes</title>
+    <style>
+        .bigDiv{
+            font-size: 40pt;
+            background-color: brown;
+            color:wheat;
+            width: 20%;
+            height: 200px;
+        }
+    </style>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        $().ready(function(){
+            $("[class='bigDiv']").append(" This element include some content ");
+            $("input[type = 'password]").css("background-color", "teal");
+        })
+    </script>
+</head>
+
+<body>
+    <div class="bigDiv" id="myDiv">
+        <input type="text"/>
+        <input type="password"/>
+        <p style="background-color:grey; font-size:medium">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vitae distinctio, aliquid maxime voluptas
+            nesciunt unde hic iste sequi explicabo pariatur dolorem exercitationem perspiciatis provident dicta
+            doloribus temporibus praesentium quia!
+        </p>
+
+    </div>
+</body>
+
+</html>

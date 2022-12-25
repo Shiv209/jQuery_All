@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic jQuery Concepts</title>
+    <style>
+        div {
+            width: 30%;
+            height: 400px;
+            background-color: teal;
+            display: inline-block;
+        }
+    </style>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        function onReady() {
+            console.log("This is Basic jQuery Example..!");
+            $("div").click(function () {
+                $(this).css("background-color", "orange");
+            })
+            $("a:first").click(function () {
+                $("div").hide(2000);
+            })
+            $("a:last").click(function () {
+                $("div").show(2000);
+            })
+            alert($("nav").children("a").text());
+            $("nav").parent().append("<h1>Adding this to the Document</h1>");
+        }
+        $().ready(onReady);
+    </script>
+</head>
+
+<body>
+    <nav><a href="#">Hide All</a>
+        <a href="#"> Show All</a>
+    </nav>
+    <div>
+        First Area
+    </div>
+    <div>
+        Second Area
+    </div>
+    <div>
+        Third Area
+    </div>
+
+</body>
+
+</html>
