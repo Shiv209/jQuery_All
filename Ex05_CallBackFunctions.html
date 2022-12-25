@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery callbackfunctions</title>
+</head>
+
+<body>
+    <h1>What is CallBack funcs?</h1>
+    <hr>
+    <p>
+        Callback functions are functions that are passed as arguments to other functions. This is used majorly in Event
+        driven programming where the User performs an event which the event object will call a Function set by the user
+        for that event. The function is called as Event handler. <br>
+        It is easy to create a function that takes another function as argument in JS.
+    </p>
+    <script>
+        //first function
+        function onClick(func) {
+            const num = parseInt(prompt("Enter a number: "));
+            const strValue = prompt("Enter a string value");
+            func(num, strValue);
+        }
+
+        //callback function
+        function sampleFunc(val1, val2) {
+            for (let i = 0; i < val1; i++) {
+                console.log(val2);
+            }
+        }
+        onClick(sampleFunc);
+
+    </script>
+
+
+
+</body>
+
+</html>
